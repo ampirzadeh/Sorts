@@ -1,7 +1,7 @@
 import { NuxtConfig } from '@nuxt/types'
 
 export default {
-  ssr: false,
+  ssr: true,
   target: 'static',
   head: {
     title: 'Sort',
