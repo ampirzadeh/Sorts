@@ -47,3 +47,13 @@ jobs:
 
       - name: Run linter 👀
         run: yarn lint
+      - name: Run prettier
+        run: yarn prettify
+      - name: Generate
+        run: yarn generate
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
