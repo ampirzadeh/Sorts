@@ -28,9 +28,7 @@ export default {
   components: true,
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/svg-sprite',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
   ],
   modules: [],
   build: {},
