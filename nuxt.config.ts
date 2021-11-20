@@ -3,6 +3,9 @@ import { NuxtConfig } from '@nuxt/types'
 export default {
   ssr: true,
   target: 'static',
+  router: {
+    base: process.env.NODE_ENV === 'development' ? '' : '/Sorts/',
+  },
   head: {
     title: 'Sort',
     htmlAttrs: {
