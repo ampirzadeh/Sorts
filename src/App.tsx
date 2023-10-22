@@ -43,7 +43,7 @@ function App() {
         process.env.NODE_ENV === 'development' ? 'debug-screens' : ''
       }`}
     >
-      <nav className="flex gap-3 glass top-0 right-0 z-10 p-3">
+      <nav className="flex gap-3 glass top-0 right-0 z-10 p-3 flex-wrap">
         <form className="border-solid border-r border-gray-400 px-3">
           <input
             disabled={isSorting}
