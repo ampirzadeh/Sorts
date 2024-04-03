@@ -7,7 +7,7 @@ export type SortingGenerator = Generator<StepState, StepState>
 
 export function* InsertionSort(arr: number[]): SortingGenerator {
   for (let i = 1; i < arr.length; i++) {
-    let key = arr[i]
+    const key = arr[i]
     let j = i - 1
 
     while (j >= 0 && arr[j] > key) {
@@ -23,11 +23,11 @@ export function* InsertionSort(arr: number[]): SortingGenerator {
 }
 
 export function* BubbleSort(arr: number[]): SortingGenerator {
-  for (var i = 0; i < arr.length; i++) {
-    for (var j = 0; j < arr.length - i - 1; j++)
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++)
       if (arr[j] > arr[j + 1]) [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
 
-    yield { nextStep: arr, effectedElementIndices: [i, j] }
+    yield { nextStep: arr, effectedElementIndices: [i, arr.length - i] }
   }
   return { nextStep: arr, effectedElementIndices: [] }
 }
